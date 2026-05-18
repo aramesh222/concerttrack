@@ -1,0 +1,54 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConcertTrack — My Watchlist</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Concert<span>Track</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Search</a></li>
+      <li><a href="watchlist.html" class="active">Watchlist</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+
+    <div class="hero">
+      <h1>My <em>Watchlist</em></h1>
+      <p>Events you've saved. Click "View on TM" to go directly to the Ticketmaster listing.</p>
+    </div>
+
+    <div class="loader" id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="status-msg" id="emptyState" style="display:none;">
+      <span class="big">📋</span>
+      Your watchlist is empty. <a href="index.html" style="color:var(--accent)">Search for events</a> to get started.
+    </div>
+
+    <div class="events-grid" id="watchlistGrid" style="display:none;"></div>
+
+    <div class="chart-section" id="chartSection" style="display:none;">
+      <h2>Saved Events by City</h2>
+      <div class="chart-box">
+        <canvas id="cityChart" height="100"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>ConcertTrack — Built with Ticketmaster API &amp; Supabase · INST 377</p>
+  </footer>
+
+  <script src="watchlist.js"></script>
+</body>
+</html>
